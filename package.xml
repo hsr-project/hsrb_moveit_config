@@ -1,0 +1,36 @@
+<package>
+
+  <name>hsrb_moveit_config</name>
+  <version>1.0.0</version>
+  <description>
+     A package with all the configuration and launch files for using the HSRB with the MoveIt Motion Planning Framework
+  </description>
+  <maintainer email="xr-hsr-support@mail.toyota.co.jp">HSR Support</maintainer>
+
+  <license>BSD 3-clause Clear License</license>
+
+  <author>Kazuto Murase</author>
+  <author>Keisuke Takeshita</author>
+  <author>Koji Terada</author>
+  <author>Minori Higuchi</author>
+  <author>Tamaki Nishino</author>
+  <author>Yuto Mori</author>
+
+  <run_depend>hsrb_description</run_depend>
+  <run_depend>moveit_commander</run_depend>
+  <run_depend>moveit_planners_ompl</run_depend>
+  <run_depend>moveit_ros_benchmarks</run_depend>
+  <run_depend>moveit_ros_move_group</run_depend>
+  <run_depend>moveit_ros_visualization</run_depend>
+  <run_depend>moveit_setup_assistant</run_depend>
+  <run_depend>moveit_simple_controller_manager</run_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>joy</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>topic_tools</run_depend>
+  <run_depend>xacro</run_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <test_depend>roslaunch</test_depend>
+</package>
