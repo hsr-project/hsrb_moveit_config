@@ -1,4 +1,5 @@
 # Copyright (c) 2015 TOYOTA MOTOR CORPORATION
+# Copyright (c) 2020 MID Academic Promotions, Inc.
 # All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
@@ -69,17 +70,17 @@ joint_limits:
     max_velocity: 1.5
     has_acceleration_limits: false
     max_acceleration: 0
-  world_joint/x:
+  odom_x:
     has_velocity_limits: true
     max_velocity: 0.2
     has_acceleration_limits: true
     max_acceleration: 0.05
-  world_joint/y:
+  odom_y:
     has_velocity_limits: true
     max_velocity: 0.2
     has_acceleration_limits: true
     max_acceleration: 0.05
-  world_joint/theta:
+  odom_r:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: false
