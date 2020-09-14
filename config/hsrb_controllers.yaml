@@ -45,6 +45,14 @@ controller_list:
       - odom_x
       - odom_y
       - odom_r
+  - name: hsrb/gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - hand_motor_joint
+      - hand_l_spring_proximal_joint
+      - hand_r_spring_proximal_joint
   - name: hsrb/head_trajectory_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
