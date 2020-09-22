@@ -1,25 +1,25 @@
 Overview
 ++++++++
 
-提供機能
+Functions provided
 --------
 
-- HSRBでMoveItを使用するための、launch群を提供する
+- This package provides the launch files that use MoveIt with the HSRB.
 
 How to use
 ++++++++++
 
-Launchファイル
+Launch files
 ----------------
 
-Rvizのみのシミュレータで動作確認する場合は、以下のlaunchを起動する。
-(実機や、Gazeboがなくても確認できる)
+In case you are doing a functionality test using only the Rviz simulator, start using the following launch file.
+(You can even do this without a real robot or Gazebo).
 
 .. code-block:: bash
 
    roslaunch hsrb_moveit_config hsrb_demo.launch
 
-MoveItから直接、実機、Gazebo等実際のコントローラに対して指令を発行するには、以下のlaunchを起動する。
+If it is the case that you want to execute commands from MoveIt directly against the actual controller of a real robot or Gazebo, start using the following launch file.
 
 .. code-block:: bash
 
