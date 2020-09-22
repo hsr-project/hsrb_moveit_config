@@ -4,7 +4,7 @@ Overview
 Functions provided
 --------
 
-- This package provides the launch group that uses MoveIt with the HSRB.
+- This package provides the launch files that use MoveIt with the HSRB.
 
 How to use
 ++++++++++
