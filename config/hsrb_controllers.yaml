@@ -26,7 +26,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 controller_list:
-  - name: hsrb/arm_trajectory_controller
+  - name: arm_trajectory_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true
@@ -37,7 +37,7 @@ controller_list:
       - wrist_flex_joint
       - wrist_roll_joint
       - wrist_ft_sensor_frame_joint
-  - name: hsrb/omni_trajectory_controller
+  - name: omni_trajectory_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true
@@ -45,7 +45,7 @@ controller_list:
       - odom_x
       - odom_y
       - odom_r
-  - name: hsrb/gripper_controller
+  - name: gripper_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true
@@ -53,7 +53,7 @@ controller_list:
       - hand_motor_joint
       - hand_l_spring_proximal_joint
       - hand_r_spring_proximal_joint
-  - name: hsrb/head_trajectory_controller
+  - name: head_trajectory_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true

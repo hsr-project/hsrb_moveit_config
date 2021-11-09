@@ -26,7 +26,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
  sensors:
   - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
-    point_cloud_topic: /hsrb/head_depth_camera/depth_registered/rectified_points
+    point_cloud_topic: head_rgbd_sensor/depth_registered/rectified_points
     max_range: 5.0
     point_subsample: 1
     padding_offset: 0.1

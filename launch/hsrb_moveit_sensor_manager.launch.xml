@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
   <!-- Params are specific to this plugin -->
 
-  <arg name="head_pointing_frame" default="/hsrb/head_depth_camera_pointcloud_frame" />
+  <arg name="head_pointing_frame" default="head_rgbd_sensor_depth_frame" />
   <param name="head_pointing_frame" value="$(arg head_pointing_frame)" />
 
   <!-- Params for the octomap monitor -->

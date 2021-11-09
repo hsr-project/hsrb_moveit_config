@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <arg name="fake_execution" value="false"/>
     <arg name="info" value="true"/>
     <arg name="debug" value="$(arg debug)"/>
-    <arg name="joint_states_topic" value="/hsrb/joint_states" />
+    <arg name="joint_states_topic" value="joint_states" />
     <arg name="robot_name" value="$(arg robot_name)"/>
     <arg name="upload_robot_model_launch" value="$(arg upload_robot_model_launch)"/>
   </include>
