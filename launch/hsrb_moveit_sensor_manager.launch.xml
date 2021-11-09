@@ -36,11 +36,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <param name="head_pointing_frame" value="$(arg head_pointing_frame)" />
 
   <!-- Params for the octomap monitor -->
-  
+
   <param name="octomap_frame" type="string" value="odom" />
   <param name="octomap_resolution" type="double" value="0.025" />
   <param name="max_range" type="double" value="5.0" />
-  
+
   <!-- sensors used to update the map -->
   <rosparam command="load" file="$(arg moveit_octomap_sensor_params_file)" />
 
