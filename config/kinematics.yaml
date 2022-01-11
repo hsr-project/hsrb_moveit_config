@@ -26,29 +26,29 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 arm:
-  #kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
-  kinematics_solver: bio_ik/BioIKKinematicsPlugin
+  kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
+  #kinematics_solver: bio_ik/BioIKKinematicsPlugin
   kinematics_solver_search_resolution: 0.005
   kinematics_solver_timeout: 0.005
   kinematics_solver_attempts: 3
   minimal_displacement_weight: 1.0
 whole_body:
-  #kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
-  kinematics_solver: bio_ik/BioIKKinematicsPlugin
+  kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
+  #kinematics_solver: bio_ik/BioIKKinematicsPlugin
   kinematics_solver_search_resolution: 0.005
   kinematics_solver_timeout: 0.005
   kinematics_solver_attempts: 3
   minimal_displacement_weight: 1.0
 whole_body_weighted:
-  #kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
-  kinematics_solver: bio_ik/BioIKKinematicsPlugin
+  kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
+  #kinematics_solver: bio_ik/BioIKKinematicsPlugin
   kinematics_solver_search_resolution: 0.005
   kinematics_solver_timeout: 0.005
   kinematics_solver_attempts: 3
   minimal_displacement_weight: 1.0
 whole_body_light:
-  #kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
-  kinematics_solver: bio_ik/BioIKKinematicsPlugin
+  kinematics_solver: trac_ik_kinematics_plugin/TRAC_IKKinematicsPlugin
+  #kinematics_solver: bio_ik/BioIKKinematicsPlugin
   kinematics_solver_search_resolution: 0.005
   kinematics_solver_timeout: 0.005
   kinematics_solver_attempts: 3
