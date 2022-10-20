@@ -1,7 +1,6 @@
-<package>
-
+<package format="3">
   <name>hsrb_moveit_config</name>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
   <description>
      A package with all the configuration and launch files for using the HSRB with the MoveIt Motion Planning Framework
   </description>
@@ -16,21 +15,26 @@
   <author>Tamaki Nishino</author>
   <author>Yuto Mori</author>
 
-  <run_depend>hsrb_description</run_depend>
-  <run_depend>moveit_commander</run_depend>
-  <run_depend>moveit_planners_ompl</run_depend>
-  <run_depend>moveit_ros_benchmarks</run_depend>
-  <run_depend>moveit_ros_move_group</run_depend>
-  <run_depend>moveit_ros_visualization</run_depend>
-  <run_depend>moveit_setup_assistant</run_depend>
-  <run_depend>moveit_simple_controller_manager</run_depend>
-  <run_depend>joint_state_publisher</run_depend>
-  <run_depend>joy</run_depend>
-  <run_depend>robot_state_publisher</run_depend>
-  <run_depend>rviz</run_depend>
-  <run_depend>topic_tools</run_depend>
-  <run_depend>xacro</run_depend>
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <test_depend>roslaunch</test_depend>
+  <depend>moveit_ros</depend>
+  <depend>rclcpp</depend>
+
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>hsrb_description</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>moveit_planners_ompl</exec_depend>
+  <exec_depend>moveit_ros_perception</exec_depend>
+  <exec_depend>moveit_ros_visualization</exec_depend>
+  <exec_depend>moveit_simple_controller_manager</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>

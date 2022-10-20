@@ -9,21 +9,20 @@ Functions provided
 How to use
 ++++++++++
 
-Launch files
+Launch moveit
 ----------------
 
-In case you are doing a functionality test using only the Rviz simulator, start using the following launch file.
-(You can even do this without a real robot or Gazebo).
+.. code-block:: bash
+
+   ros2 launch hsrb_moveit_config hsrb_demo.launch.py
+
+
+Example of moveit commander
+-----------------------------
 
 .. code-block:: bash
 
-   roslaunch hsrb_moveit_config hsrb_demo.launch
-
-If it is the case that you want to execute commands from MoveIt directly against the actual controller of a real robot or Gazebo, start using the following launch file.
-
-.. code-block:: bash
-
-   roslaunch hsrb_moveit_config hsrb_demo_with_controller.launch
+   ros2 launch hsrb_moveit_config hsrb_example.launch.py example_name:=moveit_fk_demo
 
 LICENSE
 +++++++

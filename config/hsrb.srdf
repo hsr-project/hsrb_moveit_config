@@ -1,33 +1,4 @@
 <?xml version="1.0" ?>
-<!--
-Copyright (c) 2015, Toyota Motor Corporation
-Copyright (c) 2020, MID Academic Promotions, Inc.
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
- * Redistributions of source code must retain the above copyright notice,
-   this list of conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-   documentation and/or other materials provided with the distribution.
- * Neither the name of Toyota Motor Corporation nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
--->
 <!--This does not replace URDF, and is not an extension of URDF.
     This is a format for representing semantic information about the robot structure.
     A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
@@ -57,7 +28,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <group name="base">
         <joint name="odom_x" />
         <joint name="odom_y" />
-        <joint name="odom_r" />
+        <joint name="odom_t" />
     </group>
     <group name="whole_body">
         <group name="arm" />
@@ -71,6 +42,39 @@ POSSIBILITY OF SUCH DAMAGE.
         <group name="arm" />
         <group name="base" />
     </group>
+    <group_state name="whole_body_testing_1" group="whole_body">
+        <joint name="arm_lift_joint" value="0.0" />
+        <joint name="arm_flex_joint" value="0.0" />
+        <joint name="arm_roll_joint" value="0.0" />
+        <joint name="wrist_flex_joint" value="-1.57" />
+        <joint name="wrist_roll_joint" value="0.0" />
+        <joint name="wrist_ft_sensor_frame_joint" value="0.0" />
+        <joint name="odom_x" value="1.0" />
+        <joint name="odom_y" value="0.0" />
+        <joint name="odom_t" value="0.0" />
+    </group_state>
+    <group_state name="whole_body_testing_2" group="whole_body">
+        <joint name="arm_lift_joint" value="0.0" />
+        <joint name="arm_flex_joint" value="-0.5" />
+        <joint name="arm_roll_joint" value="0.0" />
+        <joint name="wrist_flex_joint" value="-1.57" />
+        <joint name="wrist_roll_joint" value="0.0" />
+        <joint name="wrist_ft_sensor_frame_joint" value="0.0" />
+        <joint name="odom_x" value="1.0" />
+        <joint name="odom_y" value="1.0" />
+        <joint name="odom_t" value="1.57" />
+    </group_state>
+    <group_state name="whole_body_testing_3" group="whole_body">
+        <joint name="arm_lift_joint" value="0.0" />
+        <joint name="arm_flex_joint" value="0.0" />
+        <joint name="arm_roll_joint" value="-1.57" />
+        <joint name="wrist_flex_joint" value="-1.57" />
+        <joint name="wrist_roll_joint" value="0.0" />
+        <joint name="wrist_ft_sensor_frame_joint" value="0.0" />
+        <joint name="odom_x" value="0.0" />
+        <joint name="odom_y" value="0.0" />
+        <joint name="odom_t" value="0.0" />
+    </group_state>
     <group_state name="neutral" group="arm">
         <joint name="arm_lift_joint" value="0.0" />
         <joint name="arm_flex_joint" value="0.0" />
@@ -91,10 +95,13 @@ POSSIBILITY OF SUCH DAMAGE.
         <joint name="head_pan_joint" value="0.0" />
         <joint name="head_tilt_joint" value="0.0" />
     </group_state>
+    <group_state name="neutral" group="base">
+        <joint name="odom_x" value="0.0" />
+        <joint name="odom_y" value="0.0" />
+        <joint name="odom_t" value="0.0" />
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="eef" parent_link="hand_palm_link" group="gripper" />
-    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="world_joint" type="planar" parent_frame="odom" child_link="base_footprint" />
     <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
     <passive_joint name="base_l_passive_wheel_x_frame_joint" />
     <passive_joint name="base_l_passive_wheel_y_frame_joint" />

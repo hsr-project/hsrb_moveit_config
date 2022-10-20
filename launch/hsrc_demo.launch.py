@@ -1,4 +1,7 @@
-# Copyright (c) 2015 TOYOTA MOTOR CORPORATION
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2022 TOYOTA MOTOR CORPORATION
 # All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
@@ -24,27 +27,16 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-controller_list:
-  - name: fake_arm_controller
-    joints:
-      - arm_lift_joint
-      - arm_flex_joint
-      - arm_roll_joint
-      - wrist_flex_joint
-      - wrist_roll_joint
-      - wrist_ft_sensor_frame_joint
-  - name: fake_gripper_controller
-    joints:
-      - hand_motor_joint
-      - hand_l_distal_joint
-      - hand_r_distal_joint
-      - hand_l_spring_proximal_joint
-      - hand_r_spring_proximal_joint
-  - name: fake_base_controller
-    type: multidof interpolate
-    joints:
-      - world_joint
-  - name: fake_head_controller
-    joints:
-      - head_pan_joint
-      - head_tilt_joint
+from launch import LaunchDescription
+
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import ThisLaunchFileDir
+
+
+def generate_launch_description():
+    return LaunchDescription([
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([ThisLaunchFileDir(), '/demo.py']),
+            launch_arguments={'description_package': 'hsrb_description',
+                              'description_file': 'hsrc1s.urdf.xacro'}.items())])
