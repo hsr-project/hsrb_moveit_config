@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <group name="base">
         <joint name="odom_x" />
         <joint name="odom_y" />
-        <joint name="odom_r" />
+        <joint name="odom_t" />
     </group>
     <group name="whole_body">
         <group name="arm" />

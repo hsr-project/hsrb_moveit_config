@@ -37,14 +37,14 @@ controller_list:
       - wrist_flex_joint
       - wrist_roll_joint
       - wrist_ft_sensor_frame_joint
-  - name: hsrb/omni_trajectory_controller
+  - name: hsrb/omni_base_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true
     joints:
       - odom_x
       - odom_y
-      - odom_r
+      - odom_t
   - name: hsrb/gripper_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
