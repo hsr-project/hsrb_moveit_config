@@ -36,7 +36,7 @@ from sensor_msgs.msg import JointState
 class OdomJointStatePublisher(Node):
 
     def __init__(self):
-        """odom_x/y/tをJointStateで発行するノード，topic_toolsのros2移行が完了したら，そちらを使う"""
+        """Use that when the ROS2 migration of Topic_tools is completed, a node that issues ODOM_X/Y/T in JointState."""
         super().__init__('odom_joint_state_publisher')
         self._publisher = self.create_publisher(JointState, 'odom_joint_states', 1)
         self._subscription = self.create_subscription(

@@ -113,7 +113,7 @@ def odom_x_joint():
     j.append(ET.Element('parent', {'link': 'odom_yx_link'}))
     j.append(ET.Element('child', {'link': 'odom_xt_link'}))
     j.append(ET.Element('limit', {'lower': '-10', 'upper': '10', 'effort': '0.1', 'velocity': '0.2'}))
-    return(j)
+    return (j)
 
 
 def odom_y_joint():
@@ -122,7 +122,7 @@ def odom_y_joint():
     j.append(ET.Element('parent', {'link': 'odom'}))
     j.append(ET.Element('child', {'link': 'odom_yx_link'}))
     j.append(ET.Element('limit', {'lower': '-10', 'upper': '10', 'effort': '0.1', 'velocity': '0.2'}))
-    return(j)
+    return (j)
 
 
 def link(name):
@@ -134,4 +134,4 @@ def link(name):
     i.append(ET.Element('inertia', {'ixx': str(inertia), 'ixy': '0',
              'ixz': '0', 'iyy': str(inertia), 'iyz': '0', 'izz': str(inertia)}))
     link.append(i)
-    return(link)
+    return (link)
