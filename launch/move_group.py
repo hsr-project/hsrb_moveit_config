@@ -130,7 +130,7 @@ def generate_launch_description():
                      executable='static_transform_publisher',
                      name='static_transform_publisher',
                      output='log',
-                     arguments=['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', 'world', 'odom'])
+                     arguments=['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', 'odom', 'world'])
 
     odom_joint_states_publisher = Node(package='hsrb_moveit_config',
                                        executable='odom_joint_states_publisher.py',
